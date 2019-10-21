@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/deliciousJS.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -25,8 +25,738 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<!-- Intro -->
+				<section 
+					data-background-image="../assets/donuts-cover.gif"
+					data-background-opacity="0.75"
+					data-background-transition="fade"
+					data-transition="fade"
+				>
+					<h1>Delicious JavaScript: Delectable Explanations of the Power of JS</h1>
+					<div style="display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;">
+            <h4 class="name">@AdrienneTacke</h4>
+						<h4 class="name">Adrienne Braganza Tacke</h4>
+						<h4 class="name">NEJS Conf 2019</h4>
+					</div>
+				</section>
+				<section data-transition="fade-in-then-out" class="larger-font">
+					<span class="fragment fade-in">JavaScript</span>
+					<span class="fragment fade-in">is</span>
+          <span class="fragment fade-in">hard</span>
+          <aside class="notes" data-markdown>
+            - Unfamiliar 
+            - Especially if you're new to coding
+            - If you've avoided for most of your career
+          </aside>
+				</section>
+				<section data-transition="fade-in-then-out" class="larger-font">
+					<span class="fragment fade-in">JavaScript</span>
+					<span class="fragment fade-in">is</span>
+          <span class="fragment fade-in">complicated</span>
+          <aside class="notes" data-markdown>
+            - Paradigm-agnostic
+              - Started OOP
+              - Just learning: Procedural
+              - Migrating to: Functional
+            - Rapid Evolution over last 10 years
+              - pre ES2015 exacerbated issues
+              - feature on top of features made it complicated to learn
+            - Current Web Development ecosystem
+          </aside>
+				</section>
+				<section data-transition="fade-in-then-out" class="larger-font">
+					<span class="fragment fade-in">JavaScript</span>
+					<span class="fragment fade-in">is</span>
+					<span class="fragment fade-in">confusing...</span>
+				</section>
+				<section 
+					data-background-transition="fade" 
+					data-background-image="../assets/confusion.gif"
+        ></section>
+        
+
+				<!-- What did I do?-->
+				<section data-transition="fade-in" class="larger-font">
+          <section data-transition="slide">
+            <span class="fragment fade-in">What</span>
+            <span class="fragment fade-in">do</span>
+            <span class="fragment fade-in">I</span>
+            <span class="fragment fade-in">do?</span>
+          </section>
+          <section data-transition="slide" class="larger-font">
+            🎶 
+            *cue Def Leppard's Pour Some Sugar on Me*
+          </section>
+          <section 
+            data-background-transition="fade" 
+            data-background-image="../assets/dessert-pattern.jpg"
+          >
+          </section>
+          <section 
+            data-transition="fade-in-then-out"
+            data-background-transition="fade" 
+            data-background-image="../assets/dessert-pattern.jpg"
+            data-background-opacity="0.05"
+          >
+            <div class="toc">
+              <span class="fragment fade-in flex-center">
+                <img src="../assets/cookie.png" alt="Little cookie icon" /><span class="code-font">filter()</span>
+              </span>
+              <span class="fragment fade-in flex-center">
+                <img src="../assets/marshmallow.png" alt="Little marshmallow icon" /><span class="code-font">map()</span>
+              </span>
+              <span class="fragment fade-in flex-center">
+                <img src="../assets/donut.png" alt="Little donut icon" /><span class="code-font">reduce()</span>
+              </span>
+            </div>
+          </section>
+          <section 
+            data-transition="fade-in-then-out"
+            data-background-image="../assets/dessert-pattern.jpg"
+            data-background-opacity="0.05"
+          >
+            <div class="toc-center">
+              <span class="flex-center"><img src="../assets/cookie.png" alt="Little cookie icon" /><span class="code-font">filter()</span></span>
+            </div>
+          </section>
+        </section>
+        
+			
+
+				<!--Filter() -->
+				<section class="code-sample" data-background="#2b2b2b" data-transition="fade-in-then-out">
+					<section data-background="#2b2b2b" data-transition="fade-in-then-out">
+            <div class="toc-center">
+              <span class="flex-center">
+                <img src="../assets/cookie.png" alt="Little cookie icon" /><span class="code-font">filter()</span>
+              </span>
+            </div>
+          </section>
+					<section data-markdown data-background="2b2b2b" data-transition="fade-in-then-out" style="text-align:left;">
+						`Array.prototype.filter()`
+						
+						"*The `filter()` method creates a new array with all elements that pass the test implemented by the provided function.*" - **Official MDN Web docs**
+					</section>
+					<section data-transition="slide">Cool.</section>
+					<section data-background="#2b2b2b" data-transition="fade-in-then-out">
+						<pre class="javascript">
+							<code data-line-numbers data-trim data-noescape>
+							const food = ['🍩', '🍪', '🍪', '🥕', '🥐'];
+							</code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/cookie.png" alt="Little cookie icon" /><span class="code-font-title">filter()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+					</section>
+					<section data-background="#2b2b2b" data-transition="fade-in-then-out">
+						<pre class="javascript">
+							<code data-line-numbers data-trim data-noescape>
+							<div class="not-in-focus">const food = ['🍩', '🍪', '🍪', '🥕', '🥐'];</div>
+				
+							<span class="fragment fade-in">const onlyCookies </span><span class="fragment fade-in">= food</span><span class="fragment fade-in">.filter();</span>
+							</code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/cookie.png" alt="Little cookie icon" /><span class="code-font-title">filter()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+					</section>
+					<section data-background="#2b2b2b" data-transition="fade-in-then-out">
+						<pre class="javascript">
+							<code data-line-numbers data-trim data-noescape>
+							<span class="not-in-focus">const food = ['🍩', '🍪', '🍪', '🥕', '🥐'];</span>
+				
+							const onlyCookies = food.filter(<span class="fragment fade-in">x => x === '🍪'</span>);
+							</code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/cookie.png" alt="Little cookie icon" /><span class="code-font-title">filter()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+					</section>
+					<section data-background="#2b2b2b" data-transition="fade">
+						<pre class="javascript">
+							<code data-line-numbers data-trim data-noescape>
+							// Output of console.log(onlyCookies);
+							['🍪', '🍪' ]
+							</code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/cookie.png" alt="Little cookie icon" /><span class="code-font-title">filter()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+					</section>
+				</section>
+
+				<!-- Map() -->
+				<section class="code-sample" data-background="#2b2b2b" data-transition="fade">
+					<section data-background="#2b2b2b" data-transition="fade-in-then-out">
+            <div class="toc-center">
+              <span class="flex-center">
+                <img src="../assets/marshmallow.png" alt="Little marshmallow icon" /><span class="code-font">map()</span>
+              </span>
+            </div>
+          </section>
+					<section data-markdown data-background="2b2b2b" data-transition="fade-in-then-out" style="text-align:left;">
+						`Array.prototype.map()`
+						
+						"*The `map()` method creates a new array with the results of calling a provided function on every element in the calling array.*" - **Official MDN Web docs**
+					</section>
+					<section data-transition="slide">Tell me again, only tastier...</section>
+					<section data-background="#2b2b2b" data-transition="fade-in-then-out">
+						<pre class="javascript more-code-please">
+							<code data-line-numbers data-trim data-noescape>
+              const bagOfMarshmallows = [
+                'marshmallow', 
+                'marshMallow', 
+                'MarshMallow', 
+                'MARSHmallow', 
+                'marshMALLOW', 
+                '☁'
+              ];
+							</code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/marshmallow.png" alt="Little marshmallow icon" /><span class="code-font-title">map()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+					</section>
+					<section data-background="#2b2b2b" data-transition="fade-in-then-out">
+						<pre class="javascript more-code-please">
+							<code data-line-numbers data-trim data-noescape>
+              <span class="not-in-focus">const bagOfMarshmallows = [</span> 
+                <span class="not-in-focus">'marshmallow',</span> 
+                <span class="not-in-focus">'marshMallow',</span> 
+                <span class="not-in-focus">'MarshMallow',</span> 
+                <span class="not-in-focus">'MARSHmallow',</span> 
+                <span class="not-in-focus">'marshMALLOW',</span> 
+                <span class="not-in-focus">'☁'</span>
+              <span class="not-in-focus">];</span>
+
+              <span class="fragment fade-in">const jumboMarshmallows = </span><span class="fragment fade-in">bagOfMarshmallows</span><span class="fragment fade-in">.map();</span>
+							</code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/marshmallow.png" alt="Little marshmallow icon" /><span class="code-font-title">map()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+					</section>
+					<section data-background="#2b2b2b" data-transition="fade-in-then-out">
+						<pre class="javascript more-code-please">
+							<code data-line-numbers data-trim data-noescape>
+              <span class="not-in-focus">const bagOfMarshmallows = [</span> 
+                <span class="not-in-focus">'marshmallow',</span> 
+                <span class="not-in-focus">'marshMallow',</span> 
+                <span class="not-in-focus">'MarshMallow',</span> 
+                <span class="not-in-focus">'MARSHmallow',</span> 
+                <span class="not-in-focus">'marshMALLOW',</span> 
+                <span class="not-in-focus">'☁'</span>
+              <span class="not-in-focus">];</span>
+
+              const jumboMarshmallows = bagOfMarshmallows.map(<span class="fragment fade-in">marshmallow => {</span>
+                <span class="fragment fade-in">return marshmallow.toUpperCase();</span>
+              <span class="fragment fade-in">}</span>);
+							</code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/marshmallow.png" alt="Little marshmallow icon" /><span class="code-font-title">map()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+					</section>
+					<section data-background="#2b2b2b" data-transition="fade-in-then-out">
+						<pre class="javascript more-code-please">
+							<code data-line-numbers data-trim data-noescape>
+							// Output of console.log(jumboMarshmallows);
+							[ 'MARSHMALLOW',
+							  'MARSHMALLOW',
+							  'MARSHMALLOW',
+							  'MARSHMALLOW',
+							  'MARSHMALLOW',
+							  '☁' ]
+							</code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/marshmallow.png" alt="Little marshmallow icon" /><span class="code-font-title">map()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+          </section>
+          <section>Sweet. Jumbo MARSHMALLOWS are the best!</section>
+          <section>But wait... what's that ☁ doing there?</section>
+          <section data-background="#2b2b2b" data-transition="fade-in-then-out">
+            <pre class="javascript more-code-please">
+              <code data-line-numbers data-trim data-noescape>
+              const bagOfMarshmallows = [
+                'marshmallow', 
+                'marshMallow', 
+                'MarshMallow', 
+                'MARSHmallow', 
+                'marshMALLOW', 
+                '☁'
+              ];
+
+              const jumboMarshmallows = bagOfMarshmallows.map(marshmallow => {
+                return marshmallow.toUpperCase();
+              });
+              </code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/marshmallow.png" alt="Little marshmallow icon" /><span class="code-font-title">map()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+          </section>
+          <section data-background="#2b2b2b" data-transition="fade-in-then-out">
+            <pre class="javascript more-code-please">
+              <code data-line-numbers data-trim data-noescape>
+              <span class="not-in-focus">const bagOfMarshmallows = [</span> 
+                <span class="not-in-focus">'marshmallow',</span> 
+                <span class="not-in-focus">'marshMallow',</span> 
+                <span class="not-in-focus">'MarshMallow',</span> 
+                <span class="not-in-focus">'MARSHmallow',</span> 
+                <span class="not-in-focus">'marshMALLOW',</span> 
+                <span class="not-in-focus">'☁'</span>
+              <span class="not-in-focus">];</span>
+
+              const jumboMarshmallows = bagOfMarshmallows<span class="in-focus">.map(marshmallow => {</span>
+                <span class="in-focus">return marshmallow.toUpperCase();</span>
+              <span class="in-focus">});</span>
+              </code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/marshmallow.png" alt="Little marshmallow icon" /><span class="code-font-title">map()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+          </section>
+          <section data-background="#2b2b2b" data-transition="fade-in-then-out">
+            <pre class="javascript more-code-please">
+              <code data-line-numbers data-trim data-noescape>
+              <span class="not-in-focus">const bagOfMarshmallows = [</span> 
+                <span class="not-in-focus">'marshmallow',</span> 
+                <span class="not-in-focus">'marshMallow',</span> 
+                <span class="not-in-focus">'MarshMallow',</span> 
+                <span class="not-in-focus">'MARSHmallow',</span> 
+                <span class="not-in-focus">'marshMALLOW',</span> 
+                <span class="not-in-focus">'☁'</span>
+              <span class="not-in-focus">];</span>
+
+              const jumboMarshmallows = bagOfMarshmallows
+              
+                <span class="in-focus">.map(marshmallow => {</span>
+                  <span class="in-focus">return marshmallow.toUpperCase();</span>
+                <span class="in-focus">});</span>
+              </code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/marshmallow.png" alt="Little marshmallow icon" /><span class="code-font-title">map()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+          </section>
+          <section data-background="#2b2b2b" data-transition="fade-in-then-out">
+            <pre class="javascript more-code-please">
+              <code data-line-numbers data-trim data-noescape>
+              <span class="not-in-focus">const bagOfMarshmallows = [</span> 
+                <span class="not-in-focus">'marshmallow',</span> 
+                <span class="not-in-focus">'marshMallow',</span> 
+                <span class="not-in-focus">'MarshMallow',</span> 
+                <span class="not-in-focus">'MARSHmallow',</span> 
+                <span class="not-in-focus">'marshMALLOW',</span> 
+                <span class="not-in-focus">'☁'</span>
+              <span class="not-in-focus">];</span>
+
+              const <span class="in-focus">jumboMarshmallows</span> = bagOfMarshmallows
+              
+                .map(marshmallow => {
+                  return marshmallow.toUpperCase();
+                });
+              </code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/marshmallow.png" alt="Little marshmallow icon" /><span class="code-font-title">map()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+          </section>
+          <section data-background="#2b2b2b" data-transition="fade-in-then-out">
+            <pre class="javascript more-code-please">
+              <code data-line-numbers data-trim data-noescape>
+              <span class="not-in-focus">const bagOfMarshmallows = [</span> 
+                <span class="not-in-focus">'marshmallow',</span> 
+                <span class="not-in-focus">'marshMallow',</span> 
+                <span class="not-in-focus">'MarshMallow',</span> 
+                <span class="not-in-focus">'MARSHmallow',</span> 
+                <span class="not-in-focus">'marshMALLOW',</span> 
+                <span class="not-in-focus">'☁'</span>
+              <span class="not-in-focus">];</span>
+
+              const <span class="in-focus">filteredJumboMarshmallows</span> = bagOfMarshmallows
+              
+                .map(marshmallow => {
+                  return marshmallow.toUpperCase();
+                });
+              </code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/marshmallow.png" alt="Little marshmallow icon" /><span class="code-font-title">map()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+          </section>
+          <section data-background="#2b2b2b" data-transition="fade-in-then-out">
+            <pre class="javascript more-code-please">
+              <code data-line-numbers data-trim data-noescape>
+              <span class="not-in-focus">const bagOfMarshmallows = [</span> 
+                <span class="not-in-focus">'marshmallow',</span> 
+                <span class="not-in-focus">'marshMallow',</span> 
+                <span class="not-in-focus">'MarshMallow',</span> 
+                <span class="not-in-focus">'MARSHmallow',</span> 
+                <span class="not-in-focus">'marshMALLOW',</span> 
+                <span class="not-in-focus">'☁'</span>
+              <span class="not-in-focus">];</span>
+
+              const filteredJumboMarshmallows = bagOfMarshmallows
+              // Filter out any random clouds first!
+                <span class="not-in-focus">.map(marshmallow => {</span>
+                  <span class="not-in-focus">return marshmallow.toUpperCase();</span>
+                <span class="not-in-focus">});</span>
+              </code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/marshmallow.png" alt="Little marshmallow icon" /><span class="code-font-title">map()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+          </section>
+          <section data-background="#2b2b2b" data-transition="fade-in-then-out">
+            <pre class="javascript more-code-please">
+              <code data-line-numbers data-trim data-noescape>
+              <span class="not-in-focus">const bagOfMarshmallows = [</span> 
+                <span class="not-in-focus">'marshmallow',</span> 
+                <span class="not-in-focus">'marshMallow',</span> 
+                <span class="not-in-focus">'MarshMallow',</span> 
+                <span class="not-in-focus">'MARSHmallow',</span> 
+                <span class="not-in-focus">'marshMALLOW',</span> 
+                <span class="not-in-focus">'☁'</span>
+              <span class="not-in-focus">];</span>
+
+              const filteredJumboMarshmallows = bagOfMarshmallows
+                <span class="fragment fade-in-then-obfuscate">.filter</span><span class="fragment fade-in-then-obfuscate">(x => x !== '☁')</span>
+                <span class="not-in-focus">.map(marshmallow => {</span>
+                  <span class="not-in-focus">return marshmallow.toUpperCase();</span>
+                <span class="not-in-focus">});</span>
+              </code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/marshmallow.png" alt="Little marshmallow icon" /><span class="code-font-title">map()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+          </section>
+          <section data-background="#2b2b2b" data-transition="fade-in-then-out">
+            <pre class="javascript more-code-please">
+              <code data-line-numbers data-trim data-noescape>
+              <span class="not-in-focus">const bagOfMarshmallows = [</span> 
+                <span class="not-in-focus">'marshmallow',</span> 
+                <span class="not-in-focus">'marshMallow',</span> 
+                <span class="not-in-focus">'MarshMallow',</span> 
+                <span class="not-in-focus">'MARSHmallow',</span> 
+                <span class="not-in-focus">'marshMALLOW',</span> 
+                <span class="not-in-focus">'☁'</span>
+              <span class="not-in-focus">];</span>
+
+              const filteredJumboMarshmallows = bagOfMarshmallows
+                .filter(x => x !== '☁')
+                .map(marshmallow => {
+                  return marshmallow.toUpperCase();
+                });
+              </code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/marshmallow.png" alt="Little marshmallow icon" /><span class="code-font-title">map()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+          </section>
+          <section data-background="#2b2b2b" data-transition="fade">
+              <pre class="javascript more-code-please">
+                <code data-line-numbers data-trim data-noescape>
+                // Output of console.log(filteredJumboMarshmallows);
+                [ 'MARSHMALLOW',
+                  'MARSHMALLOW',
+                  'MARSHMALLOW',
+                  'MARSHMALLOW',
+                  'MARSHMALLOW']
+                </code>
+              </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/marshmallow.png" alt="Little marshmallow icon" /><span class="code-font-title">map()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+            </section>
+        </section>
+        	
+        <!-- Reduce() -->
+        <section class="code-sample" data-background="#2b2b2b" data-transition="fade">
+					<section data-background="#2b2b2b" data-transition="fade-in-then-out">
+            <div class="toc-center">
+              <span class="flex-center">
+                <img src="../assets/donut.png" alt="Little donut icon" /><span class="code-font">reduce()</span>
+              </span>
+            </div>
+          </section>
+					<section data-markdown data-background="2b2b2b" data-transition="fade-in-then-out" style="text-align:left;">
+						`Array.prototype.reduce()`
+						
+						"*The `reduce()` method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.*" - **Official MDN Web docs**
+					</section>
+					<section data-transition="slide">That's a mouthful... (and not the sweet kind.)</section>
+					<section data-background="#2b2b2b" data-transition="fade-in-then-out">
+						<pre class="javascript more-code-please">
+							<code data-line-numbers data-trim data-noescape>
+              const donutLog = [
+                { day: 'Monday', totalEaten: 2 }, 
+                { day: 'Tuesday', totalEaten: 1 } ,
+                { day: 'Wednesday', totalEaten: 3 },
+                { day: 'Thursday', totalEaten: 2 },
+                { day: 'Friday', totalEaten: 4 } 
+              ];
+							</code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/donut.png" alt="Little donut icon" /><span class="code-font-title">reduce()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+					</section>
+					<section data-background="#2b2b2b" data-transition="fade-in-then-out">
+						<pre class="javascript more-code-please">
+							<code data-line-numbers data-trim data-noescape>
+              <span class="not-in-focus">const donutLog = [</span>
+                <span class="not-in-focus">{ day: 'Monday', totalEaten: 2 },</span> 
+                <span class="not-in-focus">{ day: 'Tuesday', totalEaten: 1 },</span> 
+                <span class="not-in-focus">{ day: 'Wednesday', totalEaten: 3 },</span>
+                <span class="not-in-focus">{ day: 'Thursday', totalEaten: 2 },</span>
+                <span class="not-in-focus">{ day: 'Friday', totalEaten: 4 },</span> 
+              <span class="not-in-focus">];</span>
+
+              <span class="fragment fade-in">const caloriesConsumed = </span><span class="fragment fade-in">donutLog</span><span class="fragment fade-in">.reduce();</span>
+							</code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/donut.png" alt="Little donut icon" /><span class="code-font-title">reduce()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+					</section>
+					<section data-background="#2b2b2b" data-transition="fade">
+						<pre class="javascript more-code-please">
+							<code data-line-numbers data-trim data-noescape>
+              <span class="not-in-focus">const donutLog = [</span>
+                <span class="not-in-focus">{ day: 'Monday', totalEaten: 2 },</span> 
+                <span class="not-in-focus">{ day: 'Tuesday', totalEaten: 1 },</span> 
+                <span class="not-in-focus">{ day: 'Wednesday', totalEaten: 3 },</span>
+                <span class="not-in-focus">{ day: 'Thursday', totalEaten: 2 },</span>
+                <span class="not-in-focus">{ day: 'Friday', totalEaten: 4 },</span> 
+              <span class="not-in-focus">];</span>
+
+              const caloriesConsumed = donutLog.reduce(<span class="fragment fade-in">(accumulator, currentValue) </span>
+
+              );
+							</code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/donut.png" alt="Little donut icon" /><span class="code-font-title">reduce()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+					</section>
+					<section data-background="#2b2b2b" data-transition="fade">
+						<pre class="javascript more-code-please">
+							<code data-line-numbers data-trim data-noescape>
+              <span class="not-in-focus">const donutLog = [</span>
+                <span class="not-in-focus">{ day: 'Monday', totalEaten: 2 },</span> 
+                <span class="not-in-focus">{ day: 'Tuesday', totalEaten: 1 },</span> 
+                <span class="not-in-focus">{ day: 'Wednesday', totalEaten: 3 },</span>
+                <span class="not-in-focus">{ day: 'Thursday', totalEaten: 2 },</span>
+                <span class="not-in-focus">{ day: 'Friday', totalEaten: 4 },</span> 
+              <span class="not-in-focus">];</span>
+
+              const caloriesConsumed = donutLog.reduce((lastCount, currentEntry) <span class="fragment fade-in" data-fragment-index="1">=> {</span>
+                <span class="fragment fade-in" data-fragment-index="3">return </span><span class="fragment fade-in" data-fragment-index="5">lastCount </span><span class="fragment fade-in">+ </span><span class="fragment fade-in">(<span class="fragment fade-in">currentEntry.totalEaten </span><span class="fragment fade-in">* </span><span class="fragment fade-in">278</span>);</span>
+              <span class="fragment fade-in" data-fragment-index="2">}</span><span class="fragment fade-in" data-fragment-index="4">, 0</span>);
+							</code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/donut.png" alt="Little donut icon" /><span class="code-font-title">reduce()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+					</section>  
+					<section data-background="#2b2b2b" data-transition="fade-in-then-out">
+						<pre class="javascript more-code-please">
+							<code data-line-numbers data-trim data-noescape>
+              // Output of console.log(caloriesConsumed);
+              3336
+							</code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/donut.png" alt="Little donut icon" /><span class="code-font-title">reduce()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+          </section>
+        </section>	
+        <section data-transition="fade-in-then-out" class="larger-font">
+          <div><span class="fragment fade-in" data-fragment-index="2">🍩</span><span class="fragment fade-in" data-fragment-index="1">🤤</span><span class="fragment fade-in" data-fragment-index="2">🍩</span></div>
+          <span class="fragment fade-in">That</span>
+          <span class="fragment fade-in">was</span>
+          <span class="fragment fade-in">a</span>
+          <span class="fragment fade-in">GREAT</span>
+          <span class="fragment fade-in">week!</span>
+        </section>
+        
+        
+        <!-- Full example -->
+        <section class="code-sample" data-background="#2b2b2b" data-transition="fade-in-then-out">
+          <section data-background="#2b2b2b" data-transition="fade-in-then-out">
+						<pre class="javascript even-more-code-please">
+							<code data-line-numbers data-trim data-noescape>
+              const menu = [
+                {
+                  name: 'Chocolate Donut',
+                  emoji: '🍩',
+                  calories: 423,
+                  price: 0.75
+                },
+                {
+                  name: 'Chocolate Chip Cookie',
+                  emoji: '🍪',
+                  calories: 376,
+                  price: 1.15
+                },
+                {
+                  name: 'Bread',
+                  emoji: '🍞',
+                  calories: 1075,
+                  price: 6.99
+                },
+                {
+                  name: 'Croissant',
+                  emoji: '🥐',
+                  calories: 392,
+                  price: 2.60
+                },
+                {
+                  name: 'Heart Cookie',
+                  emoji: '💛',
+                  calories: 241,
+                  price: 0.95
+                },
+              ];
+							</code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/donut.png" alt="Little donut icon" /><span class="code-font-title">reduce()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+					</section>
+					<section data-background="#2b2b2b" data-transition="fade-in-then-out">
+						<pre class="javascript more-code-please">
+							<code data-line-numbers data-trim data-noescape>
+              <span class="fragment fade-in">const order = ['🍩', '🍩', '🍩', '💛'];</span>
+              <span class="fragment fade-in">const OMAHA_SALES_TAX = 0.07;</span>
+							</code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/donut.png" alt="Little donut icon" /><span class="code-font-title">reduce()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+					</section>
+					<section data-background="#2b2b2b" data-transition="fade">
+						<pre class="javascript more-code-please">
+              <code data-line-numbers data-trim data-noescape>
+              // Get receipt items ready
+              <span class="fragment fade-in">const receiptItems = menu</span>
+                <span class="fragment fade-in">.filter</span><span class="fragment fade-in">((food) => order.includes(food.emoji))</span>
+                <span class="fragment fade-in">.map<span class="fragment fade-in">((item) => {</span>
+                  <span class="fragment fade-in">const numberOrdered = order.filter(x => x === item.emoji).length;</span>
+
+                  <span class="fragment fade-in">return {</span>
+                    <span class="fragment fade-in">emoji: item.emoji,</span>
+                    <span class="fragment fade-in">price: item.price * numberOrdered,</span>
+                    <span class="fragment fade-in">numberOrdered: numberOrdered</span>
+                  <span class="fragment fade-in">};</span>
+                <span class="fragment fade-in">});</span>
+              </code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/donut.png" alt="Little donut icon" /><span class="code-font-title">reduce()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+					</section>
+					<section data-background="#2b2b2b" data-transition="fade">
+						<pre class="javascript more-code-please">
+							<code data-line-numbers data-trim data-noescape>
+              <span class="fragment fade-in">const totals = receiptItems</span>
+                <span class="fragment fade-in">.reduce((totals, { price }) => {</span>
+                  <span class="fragment fade-in">const subtotal = totals.subtotal + price;</span>
+                  <span class="fragment fade-in">const salesTax = totals.salesTax + price * OMAHA_SALES_TAX;</span>
+
+                  <span class="fragment fade-in">return {</span>
+                    <span class="fragment fade-in">subtotal,</span>
+                    <span class="fragment fade-in">salesTax</span>
+                  <span class="fragment fade-in">};</span>
+                <span class="fragment fade-in">}</span>, <span class="fragment fade-in">{ subtotal: 0, salesTax: 0 });</span>
+							</code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/donut.png" alt="Little donut icon" /><span class="code-font-title">reduce()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+					</section>
+					<section data-background="#2b2b2b" data-transition="fade">
+						<pre class="javascript more-code-please">
+							<code data-line-numbers data-trim data-noescape>
+              const receipt = 'Receipt\n' +
+                receiptItems.map((x) => {
+                  return `${x.numberOrdered} ${x.emoji} \t\t$${x.price.toFixed(2)}`
+                }).join('\n') + '\n' +
+                `----------------------\n` +
+                `Sub Total \t$${totals.subtotal.toFixed(2)}\n` +
+                `Sales Tax \t$${totals.salesTax.toFixed(2)}\n` +
+                `-----------------------\n` +
+                `Order Total \t$${(totals.subtotal + totals.salesTax).toFixed(2)}`;
+							</code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/donut.png" alt="Little donut icon" /><span class="code-font-title">reduce()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+					</section>
+					<section data-background="#2b2b2b" data-transition="fade">
+						<pre class="javascript more-code-please">
+							<code data-line-numbers data-trim data-noescape>
+             console.log(receipt);
+              </code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/donut.png" alt="Little donut icon" /><span class="code-font-title">reduce()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+					</section>
+					<section data-background="#2b2b2b" data-transition="fade">
+            Salamat! // That means 'Thank you' in Tagalog!
+          </section>
+          <section 
+            data-transition="fade-in-then-out"
+            data-background-transition="fade" 
+            data-background-image="../assets/dessert-pattern.jpg"
+            data-background-opacity="0.1"
+          >
+            <h2>Find me here: @adriennetacke</h2>
+            <h4>Delicious JavaScript: Delectable Explanations of the Power of JS</h4>
+            <div class="toc">
+              <span class="fragment fade-in flex-center">
+                <img src="../assets/cookie.png" alt="Little cookie icon" /><span class="code-font">filter()</span>
+              </span>
+              <span class="fragment fade-in flex-center">
+                <img src="../assets/marshmallow.png" alt="Little marshmallow icon" /><span class="code-font">map()</span>
+              </span>
+              <span class="fragment fade-in flex-center">
+                <img src="../assets/donut.png" alt="Little donut icon" /><span class="code-font">reduce()</span>
+              </span>
+            </div>
+          </section>
+        </section>
 			</div>
 		</div>
 
