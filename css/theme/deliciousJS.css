@@ -91,13 +91,13 @@ section.larger-font {
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #f9812a;
-  background-color: #f9812a; }
+  background: #e25f00;
+  background-color: #e25f00; }
 
 .reveal {
   font-family: "Rubik", Helvetica, sans-serif;
   font-size: 60px;
-  font-weight: normal;
+  font-weight: 300;
   color: #fff; }
 
 ::selection {
@@ -128,9 +128,8 @@ body {
   color: #fff;
   font-family: "Rubik", Helvetica, sans-serif;
   font-weight: 900;
-  line-height: 1.2;
+  line-height: 1;
   letter-spacing: normal;
-  text-transform: uppercase;
   text-shadow: none;
   word-wrap: break-word; }
 
@@ -222,12 +221,10 @@ body {
 .reveal pre {
   display: block;
   position: relative;
-  width: 90%;
-  margin: 20px auto;
   text-align: left;
   font-size: 0.55em;
   font-family: monospace;
-  line-height: 1.2em;
+  line-height: 1.5em;
   word-wrap: break-word;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15); }
 
@@ -237,9 +234,9 @@ body {
 
 .reveal pre code {
   display: block;
-  padding: 5px;
-  overflow: auto;
-  max-height: 400px;
+  padding: 45px;
+  overflow: hidden;
+  max-height: 50%;
   word-wrap: normal; }
 
 .reveal table {
@@ -350,4 +347,4 @@ body {
  *********************************************/
 @media print {
   .backgrounds {
-    background-color: #f9812a; } }
+    background-color: #e25f00; } }

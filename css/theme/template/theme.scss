@@ -4,7 +4,7 @@
  * GLOBAL STYLES
  *********************************************/
 
-body {
+ body {
 	@include bodyBackground();
 	background-color: $backgroundColor;
 }
@@ -12,7 +12,7 @@ body {
 .reveal {
 	font-family: $mainFont;
 	font-size: $mainFontSize;
-	font-weight: normal;
+	font-weight: 300;
 	color: $mainColor;
 }
 
@@ -52,7 +52,7 @@ body {
 	line-height: $headingLineHeight;
 	letter-spacing: $headingLetterSpacing;
 
-	text-transform: $headingTextTransform;
+	//text-transform: $headingTextTransform;
 	text-shadow: $headingTextShadow;
 
 	word-wrap: break-word;
@@ -157,13 +157,13 @@ body {
 .reveal pre {
 	display: block;
 	position: relative;
-	width: 90%;
-	margin: $blockMargin auto;
+	// width: 90%;
+	// margin: $blockMargin auto;
 
 	text-align: left;
 	font-size: 0.55em;
 	font-family: $codeFont;
-	line-height: 1.2em;
+	line-height: 1.5em;
 
 	word-wrap: break-word;
 
@@ -177,9 +177,9 @@ body {
 
 .reveal pre code {
 	display: block;
-	padding: 5px;
-	overflow: auto;
-	max-height: 400px;
+	padding: 45px;
+	overflow: hidden;
+	max-height: 50%;
 	word-wrap: normal;
 }
 
