@@ -1,0 +1,173 @@
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/red-hat-display/red-hat-display.css);
+@import url(../../lib/font/rubik/rubik.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #f9812a; //#582a6f;
+
+$mainColor: #fff;
+$headingColor: #fff;
+
+$mainFontSize: 60px;
+$mainFont: 'Rubik', Helvetica, sans-serif;
+$mainFontWeight: 500;
+
+$headingFont: 'Rubik', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingFontWeight: 900;
+
+$linkColor: #3f86bc;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2em;
+$heading2Size: 1.15em;
+$heading3Size: 1.05em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #28ada8;
+	}
+}
+
+// Adrienne Overrides --------------------------
+
+h1 {
+    text-align: left;
+}
+
+h4.name {
+    font-size: 36px !important;
+    font-weight: 300 !important;
+}
+
+section.code-sample {
+    pre {
+        box-shadow: none;
+        
+        code {
+            font-size: 40px;
+            line-height: 42px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+
+            .in-focus {
+                color: #f4c736 !important;
+            }
+        }
+    }
+
+    .more-code-please {
+        code {
+            font-size: 38px;
+            line-height: 40px;
+        }
+    }
+
+    .even-more-code-please {
+        code {
+            font-size: 20px;
+            line-height: 21px;
+        }
+    }
+}
+
+section.larger-font {
+    font-size: 100px;
+}
+
+.not-in-focus {
+    color: #dddddd !important;
+    opacity: 0.55;
+}
+
+.code-font {
+    font-family: monospace;
+    font-size: 80px;
+}
+
+.toc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+ 
+    }
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.toc-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toc,
+.toc-center {
+    img {
+        height: 6vh !important;
+        width: 6vh !important;
+        margin: 0 !important;
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+}
+
+.topic-legend {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.6;
+    width: 100%;
+
+    .code-font-title {
+        font-family: monospace;
+        font-size: 30px;
+    }
+
+    img {
+        height: 3vh !important;
+        width: 3vh !important;
+        margin: 0 !important;
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+    }
+
+    .twitter-annotation {
+       // font-family: 'Rubik', Helvetica, sans-serif;
+        //font-weight: 500;
+        font-family: monospace;
+        font-size: 30px;
+    }
+}
+
+
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
