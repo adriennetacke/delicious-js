@@ -34,9 +34,8 @@
 				>
 					<h1>Delicious JavaScript: Delectable Explanations of the Power of JS</h1>
 					<div style="display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;">
-            <h4 class="name">@AdrienneTacke</h4>
-						<h4 class="name">Adrienne Braganza Tacke</h4>
-						<h4 class="name">NEJS Conf 2019</h4>
+						<h4 class="name">ThunderPlains 2019</h4>
+            <h4 class="name">@adriennetacke</h4>
 					</div>
 				</section>
 				<section data-transition="fade-in-then-out" class="larger-font">
@@ -612,34 +611,34 @@
 							<code data-line-numbers data-trim data-noescape>
               const menu = [
                 {
-                  name: 'Chocolate Donut',
-                  emoji: '🍩',
-                  calories: 423,
-                  price: 0.75
-                },
-                {
-                  name: 'Chocolate Chip Cookie',
-                  emoji: '🍪',
-                  calories: 376,
-                  price: 1.15
-                },
-                {
-                  name: 'Bread',
-                  emoji: '🍞',
-                  calories: 1075,
-                  price: 6.99
-                },
-                {
                   name: 'Croissant',
                   emoji: '🥐',
-                  calories: 392,
-                  price: 2.60
+                  calories: 453,
+                  price: 4.00
                 },
                 {
-                  name: 'Heart Cookie',
-                  emoji: '💛',
-                  calories: 241,
-                  price: 0.95
+                  name: 'Chocolate Chunk Cookie',
+                  emoji: '🍪',
+                  calories: 376,
+                  price: 2.00
+                },
+                {
+                  name: 'Diner Mug Coffee',
+                  emoji: '☕',
+                  calories: 5,
+                  price: 3.75
+                },
+                {
+                  name: 'Joenut of the Day',
+                  emoji: '🍩',
+                  calories: 392,
+                  price: 4.00
+                },
+                {
+                  name: 'Gooey Butter Bar',
+                  emoji: '🧈',
+                  calories: 491,
+                  price: 3.00
                 },
               ];
 							</code>
@@ -652,8 +651,8 @@
 					<section data-background="#2b2b2b" data-transition="fade-in-then-out">
 						<pre class="javascript more-code-please">
 							<code data-line-numbers data-trim data-noescape>
-              <span class="fragment fade-in">const order = ['🍩', '🍩', '🍩', '💛'];</span>
-              <span class="fragment fade-in">const OMAHA_SALES_TAX = 0.07;</span>
+              <span class="fragment fade-in">const order = ['🍩', '🥐', '☕', '🍪', '🍪'];</span>
+              <span class="fragment fade-in">const OKC_COMBINED_SALES_TAX = 0.0863;</span>
 							</code>
             </pre>
             <div class="topic-legend">
@@ -689,13 +688,13 @@
               <span class="fragment fade-in">const totals = receiptItems</span>
                 <span class="fragment fade-in">.reduce((totals, { price }) => {</span>
                   <span class="fragment fade-in">const subtotal = totals.subtotal + price;</span>
-                  <span class="fragment fade-in">const salesTax = totals.salesTax + price * OMAHA_SALES_TAX;</span>
+                  <span class="fragment fade-in">const salesTax = totals.salesTax + price * OKC_COMBINED_SALES_TAX;</span>
 
                   <span class="fragment fade-in">return {</span>
                     <span class="fragment fade-in">subtotal,</span>
                     <span class="fragment fade-in">salesTax</span>
                   <span class="fragment fade-in">};</span>
-                <span class="fragment fade-in">}</span>, <span class="fragment fade-in">{ subtotal: 0, salesTax: 0 });</span>
+                <span class="fragment fade-in">}</span><span class="fragment fade-in">, { subtotal: 0, salesTax: 0 });</span>
 							</code>
             </pre>
             <div class="topic-legend">
@@ -706,7 +705,7 @@
 					<section data-background="#2b2b2b" data-transition="fade">
 						<pre class="javascript more-code-please">
 							<code data-line-numbers data-trim data-noescape>
-              const receipt = 'Receipt\n' +
+              const receipt = 'Receipt - Adrienne - Kitchen No.324\n' +
                 receiptItems.map((x) => {
                   return `${x.numberOrdered} ${x.emoji} \t\t$${x.price.toFixed(2)}`
                 }).join('\n') + '\n' +
@@ -734,6 +733,26 @@
             </div>
 					</section>
 					<section data-background="#2b2b2b" data-transition="fade">
+						<pre class="javascript more-code-please">
+							<code data-line-numbers data-trim data-noescape>
+								Receipt - Adrienne - Kitchen No.324
+								1 🥐 		$4.00
+								2 🍪 		$4.00
+								1 ☕ 		$3.75
+								1 🍩 		$4.00
+								----------------------
+								Sub Total 	$15.75
+								Sales Tax 	$1.36
+								-----------------------
+								Order Total 	$17.11
+              </code>
+            </pre>
+            <div class="topic-legend">
+              <div><img src="../assets/donut.png" alt="Little donut icon" /><span class="code-font-title">reduce()</span></div>
+              <div><span class="twitter-annotation">@adriennetacke</span></div>
+            </div>
+					</section>
+					<section data-background="#2b2b2b" data-transition="fade">
             Salamat! // That means 'Thank you' in Tagalog!
           </section>
           <section 
@@ -742,8 +761,9 @@
             data-background-image="../assets/dessert-pattern.jpg"
             data-background-opacity="0.1"
           >
-            <h2>Find me here: @adriennetacke</h2>
-            <h4>Delicious JavaScript: Delectable Explanations of the Power of JS</h4>
+						<h2>Find me here</h2>
+						<h1>Twitter: @adriennetacke Blog: blog.adrienne.io</h1>
+            <h6 style="font-size:.8em;margin-top:100px;">Delicious JavaScript: Delectable Explanations of the Power of JS</h6>
             <div class="toc">
               <span class="fragment fade-in flex-center">
                 <img src="../assets/cookie.png" alt="Little cookie icon" /><span class="code-font">filter()</span>
