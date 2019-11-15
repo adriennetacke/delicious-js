@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Delicious JavaScript: Delightful Explanantion of the Power of JS</title>
+		<title>Delicious JavaScript - RVA JavaScript</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
@@ -34,6 +34,7 @@
 				>
 					<h1>Delicious JavaScript: Delectable Explanations of the Power of JS</h1>
 					<div style="display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;">
+						<h4 class="name">RVAJS 2019</h4>
             <h4 class="name">@adriennetacke</h4>
 					</div>
 				</section>
@@ -610,34 +611,34 @@
 							<code data-line-numbers data-trim data-noescape>
               const menu = [
                 {
-                  name: 'Croissant',
-                  emoji: '🥐',
+                  name: 'Fresh Strawberry',
+                  emoji: '🍓',
                   calories: 453,
-                  price: 4.00
+                  price: 1.45
                 },
                 {
-                  name: 'Chocolate Chunk Cookie',
-                  emoji: '🍪',
-                  calories: 376,
-                  price: 2.00
-                },
-                {
-                  name: 'Diner Mug Coffee',
+                  name: 'Espresso',
                   emoji: '☕',
-                  calories: 5,
-                  price: 3.75
+                  calories: 376,
+                  price: 1.45
                 },
                 {
-                  name: 'Joenut of the Day',
+                  name: 'Chocolate Iced',
                   emoji: '🍩',
-                  calories: 392,
-                  price: 4.00
+                  calories: 273,
+                  price: 1.45
                 },
                 {
-                  name: 'Gooey Butter Bar',
-                  emoji: '🧈',
-                  calories: 491,
-                  price: 3.00
+                  name: 'Salted Caramel',
+                  emoji: '🍬',
+                  calories: 492,
+                  price: 1.55
+                },
+                {
+                  name: 'Sweet Coconut',
+                  emoji: '🥥',
+                  calories: 391,
+                  price: 1.55
                 },
               ];
 							</code>
@@ -650,8 +651,8 @@
 					<section data-background="#2b2b2b" data-transition="fade-in-then-out">
 						<pre class="javascript more-code-please">
 							<code data-line-numbers data-trim data-noescape>
-              <span class="fragment fade-in">const order = ['🍩', '🥐', '☕', '🍪', '🍪'];</span>
-              <span class="fragment fade-in">const OKC_COMBINED_SALES_TAX = 0.0863;</span>
+              <span class="fragment fade-in">const order = ['🍓', '☕', '🍩', '🍩', '🍬', '🥥'];</span>
+              <span class="fragment fade-in">const RIC_COMBINED_SALES_TAX = 0.053;</span>
 							</code>
             </pre>
             <div class="topic-legend">
@@ -687,7 +688,7 @@
               <span class="fragment fade-in">const totals = receiptItems</span>
                 <span class="fragment fade-in">.reduce((totals, { price }) => {</span>
                   <span class="fragment fade-in">const subtotal = totals.subtotal + price;</span>
-                  <span class="fragment fade-in">const salesTax = totals.salesTax + price * OKC_COMBINED_SALES_TAX;</span>
+                  <span class="fragment fade-in">const salesTax = totals.salesTax + price * RIC_COMBINED_SALES_TAX;</span>
 
                   <span class="fragment fade-in">return {</span>
                     <span class="fragment fade-in">subtotal,</span>
@@ -704,7 +705,7 @@
 					<section data-background="#2b2b2b" data-transition="fade">
 						<pre class="javascript more-code-please">
 							<code data-line-numbers data-trim data-noescape>
-              const receipt = 'Receipt - Adrienne - Kitchen No.324\n' +
+              const receipt = 'Receipt - Adrienne - Sugar Shack Donuts\n' +
                 receiptItems.map((x) => {
                   return `${x.numberOrdered} ${x.emoji} \t\t$${x.price.toFixed(2)}`
                 }).join('\n') + '\n' +
@@ -734,16 +735,17 @@
 					<section data-background="#2b2b2b" data-transition="fade">
 						<pre class="javascript more-code-please">
 							<code data-line-numbers data-trim data-noescape>
-								Receipt - Adrienne - Kitchen No.324
-								1 🥐 		$4.00
-								2 🍪 		$4.00
-								1 ☕ 		$3.75
-								1 🍩 		$4.00
-								----------------------
-								Sub Total 	$15.75
-								Sales Tax 	$1.36
-								-----------------------
-								Order Total 	$17.11
+                Receipt - Adrienne - Sugar Shack
+                1 🍓 		$1.45
+                1 ☕ 		$1.45
+                2 🍩 		$2.90
+                1 🍬 		$1.55
+                1 🥥 		$1.55
+                -----------------------
+                Sub Total 	$8.90
+                Sales Tax 	$0.47
+                -----------------------
+                Order Total 	$9.37
               </code>
             </pre>
             <div class="topic-legend">
